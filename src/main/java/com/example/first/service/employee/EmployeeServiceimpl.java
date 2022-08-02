@@ -15,7 +15,7 @@ public class EmployeeServiceimpl implements EmployeeService {
     }
 
     @Override
-    public String etEmployeeNickname(String firstName, String lastName) {
+    public String adEmployeeNickname(String firstName, String lastName) {
         return null;
     }
 
@@ -25,7 +25,7 @@ public class EmployeeServiceimpl implements EmployeeService {
     }
 
     @Override
-    public List<Employee> findByName(String nameOrSurname) {
+    public List<Employee> findByNameOrSurname(String nameOrSurname) {
         return null;
     }
 

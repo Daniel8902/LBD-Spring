@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface EmployeeService {
     public List findAll();
-    public String etEmployeeNickname(String  firstName,  String lastName);
+    public String adEmployeeNickname(String  firstName,  String lastName);
 
     public void save(Employee employee);
-    public List<Employee>  findByName(String nameOrSurname);
+    public List<Employee>  findByNameOrSurname(String nameOrSurname);
 }

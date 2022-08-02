@@ -21,8 +21,8 @@ class EmployeeServiceImpl2Test2 {
 
     @Test
     public void teest(){
-      employeeService.save(new Employee(2,"dan","dkds",877768,435534,555434));
-      employees.addAll(employeeService.findByName("dan"));
+        employeeService.save(new Employee(2,"dan","dkds",877768,435534,555434));
+        employees.addAll(employeeService.findByNameOrSurname("dan"));
         System.out.println(employees.get(0));
     }
 

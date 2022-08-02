@@ -26,9 +26,9 @@ public class FirstApplication {
 		SpringApplication.run(FirstApplication.class, args);
 	}
 	@PostConstruct
-	public void abc(){
+	public void performOperations(){
 		employeeService.findAll();
-		employeeService.etEmployeeNickname("januszz", "kowladaa");
+		employeeService.adEmployeeNickname("januszz", "kowladaa");
 
 	}
 }

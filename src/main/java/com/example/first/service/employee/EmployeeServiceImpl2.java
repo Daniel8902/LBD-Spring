@@ -18,6 +18,10 @@ public class EmployeeServiceImpl2 implements EmployeeService {
 
     private static final Logger LOG=  LoggerFactory.getLogger(EmployeeServiceImpl2.class) ;
     public Map<Long, Employee> simpleMap= new HashMap<>();
+    @Value("${my.before}")
+    String prefix;
+    @Value("${my.after}")
+    String suffix;
 
     @Override
     public List findAll() {
@@ -25,7 +29,7 @@ public class EmployeeServiceImpl2 implements EmployeeService {
     }
 
     @Override
-    public String etEmployeeNickname(String firstName, String lastName) {
+    public String adEmployeeNickname(String firstName, String lastName) {
         LOG.info(firstName+" "+lastName);
 
         String result = prefix +" "+ firstName.substring(0, 3) +" " +lastName.substring(0, 3) +" "+ suffix;
@@ -40,7 +44,7 @@ public class EmployeeServiceImpl2 implements EmployeeService {
     }
 
     @Override
-    public List<Employee> findByName(String nameOrSurname) {
+    public List<Employee> findByNameOrSurname(String nameOrSurname) {
         List<Employee> employees = new ArrayList<>();
         for(Employee client:simpleMap.values()){
             if(client.toString().contains(nameOrSurname)){
@@ -53,9 +57,5 @@ public class EmployeeServiceImpl2 implements EmployeeService {
     }
 
 
-    @Value("${my.before}")
-    String prefix;
-    @Value("${my.after}")
-    String suffix;
 
 }

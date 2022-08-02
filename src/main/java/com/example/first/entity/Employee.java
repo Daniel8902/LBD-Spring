@@ -2,12 +2,12 @@ package com.example.first.entity;
 
 public class Employee {
 
-        private  int id;
-        private String firstname;
-        private String lastname;
-        private int pesel;
-        private int phoneNumber;
-        private int numberId;
+    private  int id;
+    private String firstname;
+    private String lastname;
+    private int pesel;
+    private int phoneNumber;
+    private int numberId;
 
 
     public int getId() {
@@ -73,8 +73,12 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "firstname='" + firstname + '\'' +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", pesel=" + pesel +
+                ", phoneNumber=" + phoneNumber +
+                ", numberId=" + numberId +
                 '}';
     }
 }
